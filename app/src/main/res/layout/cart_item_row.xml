@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cartModel"
+            type="com.example.e_comerce_user.models.CartModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:contentPadding="7dp"
+        app:cardCornerRadius="4dp"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/cartRowImageView"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@{cartModel.productName}"
+                android:id="@+id/cartRowProductNameTV"
+                android:layout_toEndOf="@id/cartRowImageView"
+                android:layout_marginStart="10dp"
+                tools:text="Product Name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`BDT`+cartModel.price}"
+                android:id="@+id/cartRowProductPriceTV"
+                android:layout_below="@id/cartRowProductNameTV"
+                android:layout_toEndOf="@id/cartRowImageView"
+                android:layout_marginStart="10dp"
+                tools:text="BDT200"/>
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cartRowMinusBtn"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cartRowQtyTV"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="@{String.valueOf(cartModel.quantity)}"
+                    tools:text="1"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cartRowPlusBtn"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

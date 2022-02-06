@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.e_comerce_user.models.UserProductModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/productRowCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:contentPadding="4dp"
+        app:cardCornerRadius="4dp"
+        android:clickable="true"
+        app:cardElevation="4dp"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    tools:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    app:setImageUrl="@{product.productImageUrl}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:alpha="0.5"
+                    android:background="@color/black"
+                    android:padding="4dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/addToCartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:elevation="0dp"
+                    android:src="@drawable/ic_baseline_shopping_cart_24"
+                    app:backgroundTint="@color/transparent"
+                    app:fabSize="mini"
+                    app:tint="@color/green" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/removeFromCartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:elevation="0dp"
+                    android:src="@drawable/ic_baseline_remove_shopping_cart_24"
+                    app:backgroundTint="@color/transparent"
+                    app:fabSize="mini"
+                    app:tint="@color/red" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/favoriteBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    app:backgroundTint="@color/transparent"
+                    app:tint="@color/white"
+                    app:fabSize="mini" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{product.productName}"
+                android:textSize="16sp"
+                android:padding="3dp"
+                tools:text="Smart Watch"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`BDT`+product.price}"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                tools:text="BDT3500"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

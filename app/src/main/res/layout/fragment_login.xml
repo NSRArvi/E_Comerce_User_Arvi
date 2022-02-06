@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16sp"
+        tools:context=".LoginFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, User"
+            android:layout_marginBottom="40dp"
+            android:textSize="40sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailInputET"
+            android:inputType="textEmailAddress"
+            android:hint="Email Address"
+            android:drawableStart="@drawable/ic_baseline_email_24" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordInputET"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:drawableLeft="@drawable/ic_baseline_lock_24" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginBtn"
+            android:text="Login" />
+
+        <TextView
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not registered yet?" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/registerBtn"
+            android:text="Register"
+            android:textColor="@color/black"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/errMsgTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Error Error" />
+    </LinearLayout>
+</layout>
