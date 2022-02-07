@@ -65,8 +65,8 @@ public class LoginViewModel extends ViewModel {
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnSuccessListener(authResult -> {
                     user = authResult.getUser();
-                    stateLiveData.postValue(AuthState.AUTHENTICATED)
-                    .addUserToDatabase();
+                    stateLiveData.postValue(AuthState.AUTHENTICATED);
+//                    .addUserToDatabase()
                 }).addOnFailureListener(e -> {
             errMsgLiveData.postValue(e.getLocalizedMessage());
         });

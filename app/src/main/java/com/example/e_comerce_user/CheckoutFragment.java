@@ -36,11 +36,11 @@ public class CheckoutFragment extends Fragment {
             final RadioButton rb = container.findViewById(checkedId);
             paymentMethod = rb.getText().toString();
         });
-        loginViewModel.getUserData().observe(getViewLifecycleOwner(), ecomUser -> {
-            if (ecomUser.getDeliveryAddress() != null) {
-                binding.deliveryAddressET.setText(ecomUser.getDeliveryAddress());
-            }
-        });
+//        loginViewModel.getUserData().observe(getViewLifecycleOwner(), ecomUser -> {
+//            if (ecomUser.getDeliveryAddress() != null) {
+//                binding.deliveryAddressET.setText(ecomUser.getDeliveryAddress());
+//            }
+//        });
         binding.nextBtn.setOnClickListener(v -> {
             final String address = binding.deliveryAddressET.getText().toString();
             if (address.isEmpty()) {
@@ -48,17 +48,17 @@ public class CheckoutFragment extends Fragment {
                 return;
             }
 
-            loginViewModel.updateDeliveryAddress(address, new OnActionCompleteListener() {
-                @Override
-                public void onSuccess() {
-                    Toast.makeText(getActivity(), "address saved", Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onFailure() {
-                    Toast.makeText(getActivity(), "could not save address", Toast.LENGTH_SHORT).show();
-                }
-            });
+//            loginViewModel.updateDeliveryAddress(address, new OnActionCompleteListener() {
+//                @Override
+//                public void onSuccess() {
+//                    Toast.makeText(getActivity(), "address saved", Toast.LENGTH_SHORT).show();
+//                }
+//
+//                @Override
+//                public void onFailure() {
+//                    Toast.makeText(getActivity(), "could not save address", Toast.LENGTH_SHORT).show();
+//                }
+//            });
         });
         return binding.getRoot();    }
 }
