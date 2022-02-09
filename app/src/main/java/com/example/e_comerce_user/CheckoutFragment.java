@@ -22,7 +22,6 @@ public class CheckoutFragment extends Fragment {
     private ProductViewModel productViewModel;
     private LoginViewModel loginViewModel;
     private FragmentCheckoutBinding binding;
-    private String paymentMethod = Constants.PaymentMethod.COD;
     public CheckoutFragment() { }
 
     @Override
@@ -35,7 +34,7 @@ public class CheckoutFragment extends Fragment {
         binding = FragmentCheckoutBinding.inflate(inflater);
         binding.paymentRG.setOnCheckedChangeListener((group, checkedId) -> {
             final RadioButton rb = container.findViewById(checkedId);
-            paymentMethod = rb.getText().toString();
+            productViewModel.paymentMethod = rb.getText().toString();
         });
         loginViewModel.getUserData().observe(getViewLifecycleOwner(), ecomUser -> {
             if (ecomUser.getDeliveryAddress() != null) {

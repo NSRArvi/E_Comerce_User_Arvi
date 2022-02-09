@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="order"
+            type="com.tanvir.training.ecomuserbatch1.models.OrderModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:contentPadding="6dp"
+        android:elevation="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowOrderIdTV"
+                android:text="@{`order ID:`+order.orderId}"
+                tools:text="394jkfmdfjffjf923r" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowOrderDateTV"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/rowOrderIdTV"
+                app:setFormattedDate="@{order.orderTimeStamp}"
+                tools:text="08/02/2022 12:46" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowOrderStatusTV"
+                android:layout_alignParentEnd="true"
+                android:text="@{order.orderStatus}"
+                tools:text="Pending"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -35,4 +35,17 @@
         android:textSize="32sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/home"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return to home"
+        android:drawableEnd="@drawable/ic_baseline_home_24"
+        android:drawablePadding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
 </LinearLayout>

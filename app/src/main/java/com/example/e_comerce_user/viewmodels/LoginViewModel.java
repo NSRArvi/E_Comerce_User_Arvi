@@ -27,6 +27,7 @@ public class LoginViewModel extends ViewModel {
     final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private MutableLiveData<AuthState> stateLiveData;
     private MutableLiveData<String> errMsgLiveData;
+    private MutableLiveData<EcomUser> ecomUserMutableLiveData = new MutableLiveData<>();
     private FirebaseAuth auth;
     private FirebaseUser user;
 
@@ -40,6 +41,9 @@ public class LoginViewModel extends ViewModel {
         }else {
             stateLiveData.postValue(AuthState.AUTHENTICATED);
         }
+    }
+    public MutableLiveData<EcomUser> getEcomUserMutableLiveData() {
+        return ecomUserMutableLiveData;
     }
 
     public LiveData<AuthState> getStateLiveData() {
@@ -80,7 +84,7 @@ public class LoginViewModel extends ViewModel {
                 db.collection(Constants.DbCollection.COLLECTION_USERS)
                         .document(user.getUid());
         final EcomUser ecomUser = new EcomUser(
-                user.getUid(), null, user.getEmail(),  null);
+                user.getUid(), null, user.getEmail(),  null, user.getPhoneNumber());
         doc.set(ecomUser).addOnSuccessListener(unused -> {
 
         }).addOnFailureListener(e -> {

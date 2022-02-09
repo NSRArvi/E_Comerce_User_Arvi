@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cartModel"
+            type="com.tanvir.training.ecomuserbatch1.models.CartModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:contentPadding="7dp"
+        app:cardCornerRadius="4dp"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@{cartModel.productName}"
+                android:id="@+id/cartConfirmRowProductNameTV"
+                android:layout_marginStart="10dp"
+                tools:text="Product Name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemTotalPlusQtyTV"
+                tools:text="1 x 200"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

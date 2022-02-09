@@ -26,9 +26,7 @@ public class CartListFragment extends Fragment {
     private LoginViewModel loginViewModel;
     private FragmentCartListBinding binding;
     private CartAdapter adapter;
-
-
-    public CartListFragment() {}
+public CartListFragment() {}
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

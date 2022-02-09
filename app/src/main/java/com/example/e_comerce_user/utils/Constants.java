@@ -12,10 +12,16 @@ public class Constants {
     public static final String DAY = "day";
     public static final String HOUR = "hour";
     public static final String MINUTE = "minute";
+    public static final String TAKA = "৳";
 
     public static class PaymentMethod {
         public static final String COD = "Cash on Delivery";
         public static final String ONLINE = "Online Payment";
+    }
+    public static class OrderStatus{
+        public static final String PENDING = "Pending";
+        public static final String DELIVERED = "Delivered";
+        public static final String CANCELLED = "Cancelled";
     }
 
     public static class DbCollection{
@@ -25,5 +31,8 @@ public class Constants {
         public static final String COLLECTION_ORDERS = "Orders";
         public static final String COLLECTION_USERS = "Users";
         public static final String COLLECTION_CART = "Cart";
+        public static final String COLLECTION_ORDER_DETAILS = "OrderDetails";
+        public static final String COLLECTION_ORDER_SETTINGS = "OrderSettings";
+        public static final String DOCUMENT_ORDER_SETTING = "Settings";
     }
 }
