@@ -57,7 +57,7 @@ public class CartListFragment extends Fragment {
     }
     private void updateUI(List<CartModel> cartModels) {
         final double price = productViewModel.calculateTotalPrice(cartModels);
-        binding.cartTotalPriceTV.setText("Total: BDT"+price);
+        binding.cartTotalPriceTV.setText("Total: BDT "+price);
     }
 
     @Override
