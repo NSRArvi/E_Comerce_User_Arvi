@@ -13,15 +13,32 @@
         tools:context=".ConfirmationFragment">
 
         <LinearLayout
-            android:padding="16dp"
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/order"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:text="Your Order Dashboard:"
+                android:textColor="#3F51B5"/>
+
             <LinearLayout
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:id="@+id/cartItemLayout">
+
 
             </LinearLayout>
             <androidx.cardview.widget.CardView
@@ -29,15 +46,18 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="4dp"
                 android:layout_margin="6dp"
-                app:contentPadding="8dp"
+                app:contentPadding="5dp"
                 app:cardCornerRadius="4dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="10dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -119,7 +139,7 @@
                     </LinearLayout>
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="2dp"
                         android:background="@color/black"/>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -171,6 +191,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/orderBtn"
                 android:text="Place Order"
+                android:background="@drawable/custom_et"
                 android:layout_gravity="end"
                 android:layout_margin="16dp"/>
         </LinearLayout>

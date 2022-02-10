@@ -13,22 +13,30 @@
         android:padding="16dp"
         android:gravity="center"
         tools:context=".CheckoutFragment">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/address"/>
 
         <EditText
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/deliveryAddressET"
             android:maxLines="3"
+            android:background="@drawable/custom_et"
+            android:padding="50dp"
             android:hint="Enter delivery address"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Payment method"
+            android:textColor="@color/black"
             android:padding="16dp"/>
 
         <RadioGroup
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/paymentRG"
             android:orientation="horizontal">

@@ -53,7 +53,7 @@
         <action
             android:id="@+id/action_confirmationFragment_to_orderSuccessfulFragment"
             app:destination="@id/orderSuccessfulFragment"
-            app:popUpTo="@id/cartListFragment"
+            app:popUpTo="@id/confirmationFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment

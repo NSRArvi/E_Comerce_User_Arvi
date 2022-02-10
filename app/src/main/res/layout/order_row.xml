@@ -6,7 +6,7 @@
     <data>
         <variable
             name="order"
-            type="com.tanvir.training.ecomuserbatch1.models.OrderModel" />
+            type="com.example.e_comerce_user.models.OrderModel" />
     </data>
 
     <androidx.cardview.widget.CardView
